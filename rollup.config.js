@@ -1,5 +1,5 @@
 import terser from "@rollup/plugin-terser";
-import delelet from "rollup-plugin-delete";
+import deleter from "rollup-plugin-delete";
 import dts from "rollup-plugin-dts";
 import typescript2 from "rollup-plugin-typescript2";
 
@@ -11,7 +11,7 @@ export default [
 			format: "esm",
 		},
 		plugins: [
-			delelet({ targets: "dist/" }),
+			deleter({ targets: "dist/" }),
 			typescript2({
 				useTsconfigDeclarationDir: true,
 			}),
