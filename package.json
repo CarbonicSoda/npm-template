@@ -24,5 +24,8 @@
 	"scripts": {
 		"build": "rollup -c",
 		"watch": "rollup -c --watch"
+	},
+	"publishConfig": {
+		"access": "public"
 	}
 }
