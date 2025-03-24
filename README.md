@@ -21,3 +21,7 @@ pnpm add
 # or yarn
 yarn add
 ```
+
+---
+
+_&emsp;_
