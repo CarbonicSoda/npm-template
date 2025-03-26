@@ -14,9 +14,9 @@
 	"module": "dist/index.esm.js",
 	"types": "dist/index.d.ts",
 	"exports": {
-		"default": "./dist/index.js",
+		"types": "./dist/index.d.ts",
 		"import": "./dist/index.esm.js",
-		"types": "./dist/index.d.ts"
+		"default": "./dist/index.js"
 	},
 	"devDependencies": {
 		"@rollup/plugin-terser": "^0.4.4",
