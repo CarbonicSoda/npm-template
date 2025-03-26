@@ -13,6 +13,11 @@
 	"main": "dist/index.js",
 	"module": "dist/index.esm.js",
 	"types": "dist/index.d.ts",
+	"exports": {
+		"default": "./dist/index.js",
+		"import": "./dist/index.esm.js",
+		"types": "./dist/index.d.ts"
+	},
 	"devDependencies": {
 		"@rollup/plugin-terser": "^0.4.4",
 		"rollup": "^4.35.0",
