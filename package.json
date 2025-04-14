@@ -28,7 +28,8 @@
 	},
 	"scripts": {
 		"build": "rollup -c",
-		"watch": "rollup -c --watch"
+		"watch": "rollup -c --watch",
+		"prepublish": "rollup -c"
 	},
 	"publishConfig": {
 		"access": "public"
