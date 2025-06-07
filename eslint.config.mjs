@@ -7,7 +7,7 @@ import prettier from "eslint-config-prettier";
 
 export default tslint.config(
 	{ files: ["src/**/*.ts"] },
-	{ ignores: ["dist/**", "*.config.mjs"] },
+	{ ignores: ["test/**", "dist/**", "*.config.mjs"] },
 
 	eslint.configs.recommended,
 	tslint.configs.eslintRecommended,
