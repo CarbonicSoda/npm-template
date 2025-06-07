@@ -10,7 +10,7 @@ export default [
 		output: { file: "dist/index.esm.js", format: "esm" },
 
 		plugins: [
-			deletePlugin({ targets: "dist", hook: "buildStart" }),
+			deletePlugin({ targets: "dist", runOnce: true }),
 
 			ts2Plugin({ useTsconfigDeclarationDir: true }),
 			terserPlugin(),
@@ -20,7 +20,10 @@ export default [
 		input: "src/index.ts",
 		output: { file: "dist/index.js", format: "cjs" },
 
-		plugins: [ts2Plugin({ useTsconfigDeclarationDir: true }), terserPlugin()],
+		plugins: [
+			ts2Plugin({ useTsconfigDeclarationDir: true }),
+			terserPlugin(),
+		],
 
 		watch: false,
 	},
@@ -31,7 +34,11 @@ export default [
 		plugins: [
 			dtsPlugin(),
 
-			deletePlugin({ targets: "dist/types", hook: "buildEnd" }),
+			deletePlugin({
+				targets: "dist/types",
+				hook: "buildEnd",
+				runOnce: true,
+			}),
 		],
 	},
 ];
