@@ -12,7 +12,7 @@ export default tslint.config(
 	eslint.configs.recommended,
 	tslint.configs.eslintRecommended,
 
-	tslint.configs.strictTypeChecked,
+	tslint.configs.recommendedTypeChecked,
 	tslint.configs.stylisticTypeChecked,
 	{
 		languageOptions: {
