@@ -27,6 +27,12 @@
 				"panel": "dedicated",
 				"showReuseMessage": false
 			}
+		},
+		{
+			"type": "npm",
+			"script": "lint",
+			"label": "lint",
+			"presentation": { "clear": true, "panel": "dedicated" }
 		}
 	]
 }
