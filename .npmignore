@@ -1,10 +1,7 @@
-.gitattributes
+.vscode/
+media/
+src/
+
 .prettierrc
-.vscode
-dist/types
-media
-rollup.config.js
-src
-test
-tests
+rollup.config.mjs
 tsconfig.json

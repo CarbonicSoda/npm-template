@@ -4,18 +4,39 @@
 		{
 			"type": "npm",
 			"script": "build",
-			"group": "build",
-			"problemMatcher": [],
-			"label": "npm: build",
-			"detail": "rollup -c"
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"label": "build",
+			"presentation": {
+				"clear": true,
+				"reveal": "silent",
+				"panel": "dedicated",
+				"showReuseMessage": false
+			}
 		},
 		{
 			"type": "npm",
 			"script": "watch",
 			"group": "build",
-			"problemMatcher": [],
-			"label": "npm: watch",
-			"detail": "rollup -c --watch"
+			"label": "watch",
+			"presentation": {
+				"clear": true,
+				"reveal": "silent",
+				"panel": "dedicated",
+				"showReuseMessage": false
+			}
+		},
+		{
+			"type": "npm",
+			"script": "list",
+			"label": "list",
+			"presentation": {
+				"clear": true,
+				"panel": "dedicated",
+				"showReuseMessage": false
+			}
 		}
 	]
 }
