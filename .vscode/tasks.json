@@ -27,16 +27,6 @@
 				"panel": "dedicated",
 				"showReuseMessage": false
 			}
-		},
-		{
-			"type": "npm",
-			"script": "list",
-			"label": "list",
-			"presentation": {
-				"clear": true,
-				"panel": "dedicated",
-				"showReuseMessage": false
-			}
 		}
 	]
 }

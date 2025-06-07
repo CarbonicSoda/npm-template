@@ -1,7 +1,7 @@
 {
 	"name": "package",
 	"author": "CarbonicSoda",
-	"version": "0.0.0",
+	"version": "0.0.0-reserve",
 	"description": "",
 	"license": "MIT",
 	"repository": {
@@ -20,20 +20,35 @@
 	},
 	"scripts": {
 		"prepublish": "pnpm run build",
+		"prepare": "husky",
 		"build": "rollup -c",
 		"watch": "rollup -c --watch",
+		"lint": "eslint",
 		"list": "npm pack --dry-run --json"
 	},
 	"devDependencies": {
+		"@eslint/js": "^9.28.0",
 		"@rollup/plugin-terser": "^0.4.4",
+		"@stylistic/eslint-plugin": "^4.4.1",
+		"eslint": "^9.28.0",
+		"eslint-config-prettier": "^10.1.5",
+		"husky": "^9.1.7",
+		"lint-staged": "^16.1.0",
+		"prettier": "^3.5.3",
 		"rollup": "^4.35.0",
 		"rollup-plugin-delete": "^3.0.1",
 		"rollup-plugin-dts": "^6.2.0",
 		"rollup-plugin-typescript2": "^0.36.0",
-		"typescript": "^5.8.2"
+		"typescript": "^5.8.2",
+		"typescript-eslint": "^8.33.1"
+	},
+	"lint-staged": {
+		"*.ts": [
+			"eslint --fix --no-warn-ignored --max-warnings=0",
+			"prettier --write"
+		]
 	},
 	"publishConfig": {
 		"access": "public"
-	},
-	"packageManager": "pnpm@10.11.1+sha512.e519b9f7639869dc8d5c3c5dfef73b3f091094b0a006d7317353c72b124e80e1afd429732e28705ad6bfa1ee879c1fce46c128ccebd3192101f43dd67c667912"
+	}
 }
