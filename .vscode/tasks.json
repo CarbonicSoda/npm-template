@@ -4,35 +4,8 @@
 		{
 			"type": "npm",
 			"script": "build",
-			"group": {
-				"kind": "build",
-				"isDefault": true
-			},
-			"label": "build",
-			"presentation": {
-				"clear": true,
-				"reveal": "silent",
-				"panel": "dedicated",
-				"showReuseMessage": false
-			}
-		},
-		{
-			"type": "npm",
-			"script": "watch",
-			"group": "build",
-			"label": "watch",
-			"presentation": {
-				"clear": true,
-				"reveal": "silent",
-				"panel": "dedicated",
-				"showReuseMessage": false
-			}
-		},
-		{
-			"type": "npm",
-			"script": "lint",
-			"label": "lint",
-			"presentation": { "clear": true, "panel": "dedicated" }
+			"group": { "kind": "build", "isDefault": true },
+			"label": "build"
 		}
 	]
 }
