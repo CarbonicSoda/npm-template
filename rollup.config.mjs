@@ -15,6 +15,8 @@ export default [
 			ts2Plugin({ useTsconfigDeclarationDir: true }),
 			terserPlugin(),
 		],
+
+		watch: true,
 	},
 	{
 		input: "src/index.ts",
@@ -31,14 +33,8 @@ export default [
 		input: "dist/types/index.d.ts",
 		output: [{ file: "dist/index.d.ts", format: "es" }],
 
-		plugins: [
-			dtsPlugin(),
+		plugins: [dtsPlugin()],
 
-			deletePlugin({
-				targets: "dist/types",
-				hook: "buildEnd",
-				runOnce: true,
-			}),
-		],
+		watch: true,
 	},
 ];
