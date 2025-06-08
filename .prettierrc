@@ -12,5 +12,7 @@
 	"objectWrap": "collapse",
 
 	"quoteProps": "consistent",
-	"singleAttributePerLine": true
+	"singleAttributePerLine": true,
+
+	"overrides": [{ "files": ["*.md"], "options": { "useTabs": false } }]
 }
