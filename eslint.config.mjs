@@ -12,8 +12,6 @@ export default tslint.config(
 	eslint.configs.recommended,
 	tslint.configs.eslintRecommended,
 
-	tslint.configs.recommendedTypeChecked,
-	tslint.configs.stylisticTypeChecked,
 	{
 		languageOptions: {
 			parserOptions: {
@@ -22,6 +20,8 @@ export default tslint.config(
 			},
 		},
 	},
+	tslint.configs.strictTypeChecked,
+	tslint.configs.stylisticTypeChecked,
 
 	stylistic.configs.recommended,
 
