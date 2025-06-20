@@ -1,13 +1,13 @@
 {
 	"useTabs": true,
-	"tabWidth": 4,
+	"tabWidth": 8,
 
 	"semi": true,
 	"endOfLine": "auto",
 
 	"trailingComma": "all",
 
-	"printWidth": 80,
+	"printWidth": 100,
 	"proseWrap": "always",
 	"objectWrap": "collapse",
 
