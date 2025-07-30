@@ -1,40 +1,29 @@
-import deletePlugin from "rollup-plugin-delete";
+import { defineConfig } from "rollup";
 
-import terserPlugin from "@rollup/plugin-terser";
+import minPlugin from "@rollup/plugin-terser";
 import dtsPlugin from "rollup-plugin-dts";
 import ts2Plugin from "rollup-plugin-typescript2";
 
-export default [
+export default defineConfig([
 	{
 		input: "src/index.ts",
-		output: { file: "dist/index.esm.js", format: "esm" },
-
 		plugins: [
-			deletePlugin({ targets: "dist", runOnce: true }),
-
 			ts2Plugin({ useTsconfigDeclarationDir: true }),
-			terserPlugin(),
+			minPlugin({ compress: { unsafe: true } }),
 		],
-
-		watch: true,
+		output: { file: "out/index.mjs", format: "esm" },
 	},
 	{
 		input: "src/index.ts",
-		output: { file: "dist/index.js", format: "cjs" },
-
 		plugins: [
 			ts2Plugin({ useTsconfigDeclarationDir: true }),
-			terserPlugin(),
+			minPlugin({ compress: { unsafe: true } }),
 		],
-
-		watch: false,
+		output: { file: "out/index.cjs", format: "cjs" },
 	},
 	{
-		input: "dist/types/index.d.ts",
-		output: [{ file: "dist/index.d.ts", format: "es" }],
-
+		input: "out/types/index.d.ts",
 		plugins: [dtsPlugin()],
-
-		watch: true,
+		output: { file: "out/index.d.ts", format: "es" },
 	},
-];
+]);

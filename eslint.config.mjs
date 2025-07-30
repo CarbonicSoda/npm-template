@@ -2,12 +2,11 @@ import eslint from "@eslint/js";
 import tslint from "typescript-eslint";
 
 import stylistic from "@stylistic/eslint-plugin";
-
 import prettier from "eslint-config-prettier";
 
 export default tslint.config(
 	{ files: ["src/**/*.ts"] },
-	{ ignores: ["test/**", "dist/**", "*.config.mjs"] },
+	{ ignores: ["*.config.mjs", "out/**/*"] },
 
 	eslint.configs.recommended,
 	tslint.configs.eslintRecommended,
@@ -24,6 +23,5 @@ export default tslint.config(
 	tslint.configs.stylisticTypeChecked,
 
 	stylistic.configs.recommended,
-
 	prettier,
 );
