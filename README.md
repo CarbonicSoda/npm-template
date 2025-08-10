@@ -1,9 +1,8 @@
 <h3 align="center">
-	<!-- MO TODO dont forget to replace alt -->
-	<img src="https://raw.githubusercontent.com/wavim//master/media/icon.png" width="130" alt="Icon" /><br />
-
+	<img src="https://raw.githubusercontent.com/wavim/&pack/master/media/icon.png" width="130" alt="&pack icon" /><br />
+	&pack
 </h3>
-<p align="center"></p>
+<p align="center">&pack desc</p>
 
 ---
 
@@ -13,15 +12,15 @@ Install this package in your project:
 
 ```bash
 # via npm
-npm add
+npm add &pack
 
 # or pnpm
-pnpm add
+pnpm add &pack
 
 # or yarn
-yarn add
+yarn add &pack
 ```
 
 ---
 
-_&emsp;_
+_&emsp;_ &pack

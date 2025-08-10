@@ -10,10 +10,6 @@
 		"moduleResolution": "bundler",
 		"isolatedModules": true,
 		"esModuleInterop": true,
-		"allowSyntheticDefaultImports": true,
-
-		"noEmit": true,
-		"declaration": true,
-		"declarationDir": "./out/types"
+		"allowSyntheticDefaultImports": true
 	}
 }

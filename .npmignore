@@ -1,10 +1,4 @@
-.vscode/
-.husky/
-src/
-media/
-dist/types/
-
-.prettierrc
-tsconfig.json
-rollup.config.mjs
-eslint.config.mjs
+.*
+src
+media
+*config.*
